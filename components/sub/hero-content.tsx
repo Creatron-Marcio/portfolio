@@ -46,10 +46,7 @@ export const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[900px]"
         >
-          With 10+ years of experience in AI, NLP, computer vision, and full-stack development, I specialize in delivering intelligent systems
-          using Python, FastAPI, React, and cloud platforms. From call center
-          automation to AI-powered real estate platforms, my work transforms
-          complexity into elegant, scalable products.
+          Senior AI & Python engineer with expertise in machine learning, deep learning, and end-to-end AI systems. Specialized in building and deploying production-grade ML workflows, data pipelines, and backend services using Python, with a long history of Fullstack capabilities. Proficient in integrating AI models into scalable systems, automating intelligent processes, optimizing performance, and building robust, scalable websites and web applications using modern frameworks including React and Next.js, alongside Python web frameworks such as Django, Flask, and FastAPI.
         </motion.p>
 
         <motion.a

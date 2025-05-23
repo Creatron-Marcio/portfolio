@@ -50,11 +50,9 @@ export const MY_SKILLS = [
       "Flask",
       "Django",
       "Node.js",
-      "Express.js",
       "RESTful APIs",
       "GraphQL",
       "Jakarta EE",
-      "Laravel",
     ],
   },
   {
@@ -102,78 +100,89 @@ export const MY_SKILLS = [
 export const BLOGS = [
   {
     title: "How I Built My AI-Powered Trading Assistant",
-    content: "Step-by-step breakdown of building a real-time trading bot using reinforcement learning, WebSockets, and market APIs.",
+    content:
+      "A detailed walkthrough of designing, training, and deploying a fully automated trading assistant using reinforcement learning, real-time data pipelines, and broker APIs. Covers market data ingestion using WebSockets and Kafka, stateful order book tracking, and strategy optimization using Proximal Policy Optimization (PPO) with Stable Baselines3. Includes modular signal generation pipelines, risk control layers, and execution via broker APIs like MEXC and OKX. Real-time performance is visualized through a React + Tailwind dashboard. The system is containerized with Docker, monitored with Prometheus + Grafana, and deployed using AWS ECS Fargate. Model lifecycle is tracked using MLflow and managed with Prefect for pipeline orchestration.",
     date: "2024-12-01",
     mark: 5,
   },
   {
     title: "Scaling FastAPI on AWS with ECS and CI/CD",
-    content: "Learn how to deploy FastAPI apps using Docker, GitHub Actions, and AWS ECS with full scalability and monitoring.",
+    content:
+      "Comprehensive guide on building production-grade FastAPI applications and deploying them at scale using AWS ECS (Fargate), Docker, and GitHub Actions. Covers best practices for container security, API throttling, load balancing with AWS ALB, and horizontal scaling with ECS Service Auto Scaling. Introduces GitHub Actions workflows for automated testing, linting, image building, and zero-downtime ECS blue/green deployments using AWS CodeDeploy. Discusses configuration management with AWS Secrets Manager, logging with CloudWatch, and distributed tracing with OpenTelemetry. Includes optional monitoring stack with Prometheus + Grafana and real-world techniques for graceful shutdowns, health checks, and debugging in production environments.",
     date: "2024-11-15",
     mark: 4,
   },
+  
   {
-    title: "Building a Multilingual RAG Chatbot with Pinecone & Google PaLM 2",
-    content: "Tutorial on how to build a Retrieval-Augmented Generation (RAG) chatbot that supports Arabic and English queries.",
+    title: "Building a Multilingual RAG Chatbot with Pinecone & Gemini 1.5",
+    content:
+      "An in-depth guide to building a production-grade Retrieval-Augmented Generation (RAG) chatbot that supports both Arabic and English. Covers document preprocessing with LangChain, multilingual embedding using BGE-M3, semantic indexing via Pinecone, and reranking with HuggingFace cross-encoders. Integrates Gemini 1.5 Pro for context-aware response generation, with dynamic prompt templating and fallback routing. The system includes a React + Tailwind frontend, a FastAPI backend, and features such as session memory, user feedback capture, and real-time context injection. Includes full deployment using Docker, Uvicorn with Gunicorn, and CI/CD via GitHub Actions.",
     date: "2024-10-28",
     mark: 5,
   },
   {
     title: "Real-Time Audio Transcription with FasterWhisper & WebSockets",
-    content: "A guide to implementing live transcription in React using FasterWhisper and a FastAPI backend.",
-    date: "2024-10-05",
+    content:
+      "A step-by-step tutorial for implementing real-time audio transcription using FasterWhisper for low-latency speech-to-text and FastAPI with WebSockets for bi-directional streaming. Demonstrates audio chunking in React, backend buffering with asyncio, and transcript streaming to the UI. Covers speaker diarization, silence trimming, and confidence scoring. Optimized for edge inference using quantized models on CPU/GPU with PyTorch, and includes optional integration with multilingual intent classifiers and token-authenticated WebSocket connections. Ideal for AI-powered call centers and meeting assistants.",
+    date: "2025-04-05",
     mark: 4,
   },
   {
     title: "Advanced Prompt Engineering with OpenAI Functions",
-    content: "Techniques for chaining, memory, and control flow in OpenAI chat completions using function calling.",
+    content:
+      "A deep dive into advanced prompt design patterns using OpenAI’s function calling and tool-use capabilities. Explores dynamic role-switching, multi-step prompt chaining, conditional logic execution, and memory structuring using `tool_choice`, `function_call`, and `metadata` fields in GPT-4o. Includes techniques for agent-style orchestration using LangChain and CrewAI, multi-modal prompt design with image and audio inputs, and best practices for reducing hallucination while maintaining output control. Covers both REST and OpenAI SDK usage for production deployment.",
     date: "2024-09-17",
     mark: 5,
   },
   {
     title: "How to Fine-Tune LLMs on Your Custom Dataset",
-    content: "Walkthrough of LLaMA and Mistral fine-tuning using Hugging Face and LoRA adapters on limited GPU resources.",
+    content:
+      "Comprehensive walkthrough of fine-tuning LLMs like LLaMA 3 and Mistral using Hugging Face Transformers with LoRA and QLoRA adapters. Focuses on training with limited GPU resources (e.g. single A100/RTX 4090) using techniques like 8-bit quantization, Flash Attention 2, and gradient checkpointing. Covers dataset preparation with DPO/ChatML formats, tokenizer alignment, inference benchmarking, and PEFT integration for low-latency deployment. Also discusses offline training environments and best practices for evaluating safety, coherence, and performance with LLM-as-a-judge frameworks.",
     date: "2024-09-01",
+    mark: 5,
+  },  
+  {
+    title: "Production-Grade Vector Search: FAISS vs Pinecone vs Weaviate",
+    content:
+      "An in-depth comparison of the leading vector databases used for semantic search in AI-driven applications. Evaluates FAISS (open-source, GPU-optimized), Pinecone (fully managed, real-time updates), and Weaviate (schema-aware with hybrid search) across metrics like latency, scalability, indexing speed, multi-tenancy, cost-efficiency, and compatibility with embeddings (OpenAI, BGE, Cohere). Includes benchmarks for multilingual retrieval with BGE-M3, GPU-accelerated recall with FAISS+IVFPQ, and production deployment via Docker/K8s. Concludes with architecture recommendations based on use cases like RAG chatbots, document Q&A, and personalized search.",
+    date: "2024-08-20",
     mark: 5,
   },
   {
-    title: "Production-Grade Vector Search: FAISS vs Pinecone vs Weaviate",
-    content: "Comparison of top vector databases for fast semantic search in modern AI applications.",
-    date: "2024-08-20",
-    mark: 3,
-  },
-  {
     title: "LangChain vs CrewAI: Which Agent Framework Should You Use?",
-    content: "A practical guide to building LLM agents with memory, tools, and human handoff using modern frameworks.",
+    content:
+      "A hands-on comparison of LangChain and CrewAI for building autonomous LLM agents with memory, function calling, and multi-role coordination. Breaks down core primitives like tools, memory types (buffer, summary, entity), and agent types (reactive vs multi-step planning). Highlights CrewAI’s structured agent collaboration, task delegation, and built-in human handoff via interrupt policies. Benchmarks include latency per task, tool-use success rate, and context retention accuracy. Ideal for developers building RAG pipelines, AI copilots, or multi-agent research environments.",
     date: "2024-08-10",
-    mark: 4,
+    mark: 5
   }
+  
 ];
 
 
 export const PROJECTS = [
   {
-    title: "Modern Next.js 14 Portfolio",
+    title: "AI Powered Call Center Solution",
     description:
-      'Embark on a journey through my professional evolution with the "Modern Next.js Portfolio" - a dynamic showcase of my skills, experiences, and passion for web development. Crafted with precision and powered by Next.js, this portfolio is more than just a static display; it\'s an immersive experience that reflects the cutting edge of modern web technologies.',
+    "Led the full-stack development of a real-time AI-powered call center platform using Next.js (frontend), Django (admin & auth), and FastAPI (AI services). Architected and implemented core features including real-time transcription with FasterWhisper, intelligent query handling via Google LLM, semantic search with Pinecone vector DB, and RAG-based pipelines for accurate AI responses. Developed a smart escalation mechanism for unresolved queries and enabled live WebSocket communication. The system supports multilingual interaction (English and Arabic) and includes a modular admin dashboard for service management Builted in a month. MVP stage.",
     image: "/projects/project-1.png",
     link: "https://example.com",
   },
   {
-    title: "Interactive Cards Portfolio",
+    title: "ChatLLM Teams",
     description:
-      'Step into the extraordinary world of my professional journey through the "Interactive Cards Portfolio" - an innovative and visually captivating platform that redefines the traditional portfolio experience. Ditching the conventional static layout, this portfolio leverages interactive cards to showcase my skills, projects, and personality in an engaging and dynamic manner.',
+    "Architected and implemented the backend for a multi-user enterprise conversational assistant platform leveraging Abacus.AI. Focused on real-time LLM orchestration, I developed token-based access control, dynamic memory context handling, and multi-agent prompt chaining logic. The platform supports secure, scalable collaboration across teams, enabling contextual AI-driven conversations, agent coordination, and persistent user sessions. My work emphasized reliability, latency optimization, and modular design for enterprise deployment. Built in 7 month, Real Production",
     image: "/projects/project-2.png",
-    link: "https://example.com",
+    link: "https://chatllm.abacus.ai/",
   },
   {
-    title: "Space Themed Website",
+    title: "Real Estate Property Finder",
     description:
-      'Embark on an interstellar journey with my "Space Themed Website", a mesmerizing space-themed website that invites you to explore the cosmic wonders beyond our world. Immerse yourself in an awe-inspiring digital experience that blends cutting-edge design with the mysteries of the universe.',
+      "Independently developed a full-stack, space-themed real estate discovery platform using Next.js for the frontend and Django for the backend and admin panel. I implemented a custom vector search engine for intelligent property matching based on semantic similarity, integrated geolocation filtering, and built LLM-powered modules for dynamic property description generation. The platform also features a responsive UI, user authentication, and an optimized deployment pipeline designed for performance and scalability in production environments. Built in 4 month, Real Production",
     image: "/projects/project-3.png",
-    link: "https://example.com",
+    link: "https://www.propertyfinder.ae",
   },
 ] as const;
+
 
 export const FOOTER_DATA = [
   {
@@ -182,17 +191,17 @@ export const FOOTER_DATA = [
       {
         name: "YouTube",
         icon: FaYoutube,
-        link: "https://youtube.com",
+        link: "",
       },
       {
         name: "GitHub",
         icon: RxGithubLogo,
-        link: "https://github.com",
+        link: "https://github.com/marcio-grazianni",
       },
       {
         name: "Discord",
         icon: RxDiscordLogo,
-        link: "https://discord.com",
+        link: "",
       },
     ],
   },
@@ -202,17 +211,17 @@ export const FOOTER_DATA = [
       {
         name: "Instagram",
         icon: RxInstagramLogo,
-        link: "https://instagram.com",
+        link: "",
       },
       {
         name: "Twitter",
         icon: RxTwitterLogo,
-        link: "https://twitter.com",
+        link: "",
       },
       {
         name: "Linkedin",
         icon: RxLinkedinLogo,
-        link: "https://linkedin.com",
+        link: "https://www.linkedin.com/in/marcio-grazianni-41910665/",
       },
     ],
   },
@@ -222,17 +231,17 @@ export const FOOTER_DATA = [
       {
         name: "Become Sponsor",
         icon: null,
-        link: "https://youtube.com",
+        link: "",
       },
       {
         name: "Learning about me",
         icon: null,
-        link: "https://example.com",
+        link: "",
       },
       {
         name: "Contact Me",
         icon: null,
-        link: "mailto:contact@example.com",
+        link: "marcio.grazianni05@gmail.com",
       },
     ],
   },
